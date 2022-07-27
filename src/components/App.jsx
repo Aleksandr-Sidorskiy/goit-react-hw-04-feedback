@@ -59,7 +59,7 @@ function App (){
           
             <Section title="Please leave feedback">
              <FeedbackOptions
-              options={['good', 'neutral', 'bad']}
+              options={{ good, neutral, bad }}
               onLeaveFeedback={handleClick}
             />
             

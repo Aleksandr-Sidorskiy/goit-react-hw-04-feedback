@@ -2,10 +2,12 @@ import React from "react";
 import { List, Item, Button, theme } from './StyleFeedbackOptions';
 import PropTypes from 'prop-types';
 
-function FeedbackOptions({options, onLeaveFeedback}) {
+function FeedbackOptions({ options, onLeaveFeedback }) {
+    console.log(options);
+    const data = Object.keys(options)
     return (
         <List>
-        {options.map(option => (
+        {data.map(option => (
             <Item  key={option}>
                 <Button theme={theme}
                     type="button"
@@ -22,7 +24,7 @@ function FeedbackOptions({options, onLeaveFeedback}) {
 }
 
 FeedbackOptions.propTypes = {
-     options: PropTypes.arrayOf(PropTypes.string).isRequired,
+    //  options: PropTypes.arrayOf(PropTypes.string).isRequired,
     onLeaveFeedback:PropTypes.func.isRequired,
 }
 
